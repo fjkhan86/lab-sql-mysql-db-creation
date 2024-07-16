@@ -1,9 +1,3 @@
--- Drop tables if they exist
-DROP TABLE IF EXISTS invoices;
-DROP TABLE IF EXISTS salespersons;
-DROP TABLE IF EXISTS customers;
-DROP TABLE IF EXISTS cars;
-
 -- Insert data into cars table
 INSERT INTO cars (vin, manufacturer, model, year, color)
 VALUES
@@ -11,8 +5,7 @@ VALUES
 ('ZM8G7BEUQZ97IH46V', 'Peugeot', 'Rifter', '2019', 'Red'),
 ('RKXVNNIHLVVZOUB4M', 'Ford', 'Fusion', '2018', 'White'),
 ('HKNDGS7CU31E9Z7JW', 'Toyota', 'RAV4', '2018', 'Silver'),
-('DAM41UDN3CHU2WVF6', 'Volvo', 'V60', '2019', 'Gray'),
-('DAM41UDN3CHU2WVF6', 'Volvo', 'V60 Cross Country', '2019', 'Gray');
+('DAM41UDN3CHU2WVF6', 'Volvo', 'V60', '2019', 'Gray');
 
 
 -- Insert data into Customers table
@@ -32,4 +25,9 @@ INSERT INTO salespersons (staff_id, name, store) VALUES
 (7, 'Walter Melon', 'Amsterdam'),
 (8, 'Shonda Leer', 'São Paulo');
 
-
+-- Insert data into invoices table
+INSERT INTO invoices (customer_id, invoice_number, date, car_id, customer, salesperson)
+VALUES
+(852399038, '2018-08-22', 1, 1, 3),
+(731166526, '2018-12-31', 3, 3, 5),
+(271135104, '2019-01-22', 2, 2, 7);
